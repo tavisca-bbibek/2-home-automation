@@ -1,10 +1,11 @@
 package com.tavisca.javatraining.home;
 
+import com.tavisca.javatraining.home.exception.InvalidRoomIdException;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.Scanner;
-import java.util.stream.Collectors;
 
 public class House {
     private List<Room> rooms;
@@ -21,21 +22,23 @@ public class House {
                 .findFirst();
     }
 
-    public void addRoom(String roomName) {
-        Room room = new Room(rooms.size() + 1, roomName);
+    public long addRoom(String roomName) {
+        int id = rooms.size() + 1;
+        Room room = new Room(id, roomName);
         rooms.add(room);
+        return id;
     }
 
-    public boolean addDevice(long roomId, String deviceName) {
+    public long addDevice(long roomId, String deviceName) throws InvalidRoomIdException {
         Optional<Room> maybeRoom = findRoomById(roomId);
         if (!maybeRoom.isPresent())
-            return false;
+            throw new InvalidRoomIdException(roomId + " is doesn't exist");
 
         Room room = maybeRoom.get();
-        int noOfDevices = room.getDevices().size();
-        Device device = new Device(noOfDevices + 1, deviceName);
+        int id = room.getDevices().size() + 1;
+        Device device = new Device(id, deviceName);
         room.addDevice(device);
-        return true;
+        return id;
     }
 
     public String roomStatus(long roomId) {

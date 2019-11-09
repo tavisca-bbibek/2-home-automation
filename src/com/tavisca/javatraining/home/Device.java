@@ -29,8 +29,8 @@ public class Device implements Serializable {
 
     public String status() {
         return id + "." + name + "\n" +
-                "Status: " + (isActive() ? "On" : "Off")  + "\n" +
-                "For: " + Duration.between(lastStateChange, Instant.now()).toSeconds() + " seconds";
+                "Status: " + (isActive() ? "On" : "Off ") +
+                "for: " + Duration.between(lastStateChange, Instant.now()).toSeconds() + " seconds";
     }
 
     public long getId() {

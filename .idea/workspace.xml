@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d37c2441-1408-415f-a65b-4a97f1eff1cc" name="Default Changelist" comment="" />
+    <list default="true" id="d37c2441-1408-415f-a65b-4a97f1eff1cc" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/d/1de6842a37e94c995ed6cecd06b377be88974835" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/a/7a181c0a2d536aca8eb39d89ee12edcb999b283e" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/5/95324967504bb0af1d4ad40c6d0ad01ab13c528c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/c/fcc0a3e53f7394a480445637a7347c6c9d7167ad" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/tavisca/javatraining/home/exception/InvalidRoomIdException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/tavisca/javatraining/console/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/tavisca/javatraining/console/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/tavisca/javatraining/home/Device.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/tavisca/javatraining/home/Device.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/tavisca/javatraining/home/House.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/tavisca/javatraining/home/House.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,7 +28,18 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1THgeLwaIWx7J536bYbP9eGWAAC" />
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.tavisca.javatraining.home.exception" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -90,5 +114,18 @@
       <updated>1573122528507</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

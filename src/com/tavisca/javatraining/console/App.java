@@ -2,8 +2,8 @@ package com.tavisca.javatraining.console;
 
 import com.tavisca.javatraining.home.House;
 import com.tavisca.javatraining.home.Room;
+import com.tavisca.javatraining.home.exception.InvalidRoomIdException;
 
-import java.io.IOException;
 import java.util.Optional;
 import java.util.Scanner;
 import java.util.stream.Collectors;
@@ -13,15 +13,15 @@ public class App {
     private Scanner sc;
     private House house;
 
-    public App() {
+    private App() {
         sc = new Scanner(System.in);
         house = new House();
     }
 
-    public static void main(String[] args) throws IOException, InterruptedException {
+    public static void main(String[] args) {
         App app = new App();
-
         int choice;
+
         do {
             System.out.println("Welcome to command central");
             System.out.println("| 1. Add a Room");
@@ -38,12 +38,18 @@ public class App {
             switch (choice) {
                 case 1:
                     String roomName = app.readRoomName();
-                    app.house.addRoom(roomName);
+                    long roomId = app.house.addRoom(roomName);
+                    System.out.println("Id " + roomId + " is assigned to room '" + roomName + "'");
                     break;
                 case 2:
-                    long roomId = app.readRoomId();
+                    roomId = app.readRoomId();
                     String deviceName = app.readDeviceName();
-                    app.house.addDevice(roomId, deviceName);
+                    try {
+                        long deviceId = app.house.addDevice(roomId, deviceName);
+                        System.out.println("Id " + deviceId + " is assigned to room '" + deviceName + "'");
+                    } catch (InvalidRoomIdException e) {
+                        System.err.println("Error: " + e.getMessage());
+                    }
                     break;
                 case 3:
                     System.out.println(app.house.roomStatus(app.readRoomId()));
@@ -63,14 +69,14 @@ public class App {
                     app.listDevices(app.readRoomId());
                     break;
                 default:
-                    System.out.println("Invalid option Bye!");
+                    System.err.println("Invalid option Bye!");
             }
         } while (choice >= 1 && choice <= 7);
     }
 
     private void listDevices(long roomId) {
         Optional<Room> maybeRoom = house.findRoomById(roomId);
-        if(!maybeRoom.isPresent())
+        if (!maybeRoom.isPresent())
             System.out.println("Invalid room " + roomId);
 
         String result = maybeRoom.get().getDevices().stream()
