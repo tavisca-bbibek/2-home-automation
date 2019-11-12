@@ -1,35 +1,38 @@
-package com.tavisca.javatraining.home;
+package com.tavisca.javatraining.home.device;
 
-import java.io.Serializable;
 import java.time.Duration;
 import java.time.Instant;
 
-public class Device implements Serializable {
+public abstract class Device implements Operable {
     private long id;
     private String name;
-    private boolean isActive;
+    private boolean isOn;
     private Instant lastStateChange;
 
-    public Device(long id, String name) {
+    protected Device() {
+        this.name = "Unnamed";
+    }
+
+    protected Device(long id, String name) {
         this.id = id;
         this.name = name;
         lastStateChange = Instant.now();
-        isActive = false;
+        isOn = false;
     }
 
     public void turnOn() {
-        isActive = true;
+        isOn = true;
         lastStateChange = Instant.now();
     }
 
     public void turnOff() {
-        isActive = false;
+        isOn = false;
         lastStateChange = Instant.now();
     }
 
     public String status() {
         return id + "." + name + "\n" +
-                "Status: " + (isActive() ? "On" : "Off ") +
+                "Status: " + (isOn() ? "On" : "Off ") +
                 "for: " + Duration.between(lastStateChange, Instant.now()).toSeconds() + " seconds";
     }
 
@@ -41,8 +44,12 @@ public class Device implements Serializable {
         return name;
     }
 
-    public boolean isActive() {
-        return isActive;
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public boolean isOn() {
+        return isOn;
     }
 
     public Instant getLastStateChange() {
@@ -50,6 +57,14 @@ public class Device implements Serializable {
     }
 
     public void toggleState() {
-        isActive = (!isActive);
+        isOn = (!isOn);
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public void setOn(boolean on) {
+        isOn = on;
     }
 }

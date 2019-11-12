@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+        <!ELEMENT rooms (room*)>
+        <!ELEMENT room (devices)>
+        <!ELEMENT devices (device*)>
+        <!ELEMENT device EMPTY>
+
+        <!ATTLIST room name CDATA  "Unknown">
+        <!ATTLIST device name CDATA "Unknown" >
+        <!ATTLIST device type CDATA #REQUIRED>

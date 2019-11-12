@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE  rooms SYSTEM "house-config.dtd">
+<rooms>
+    <room name="living">
+        <devices>
+            <device name="panasonic TV" type="Television"/>
+            <device name="Havell Fan" type="Fan"/>
+            <device name="Havell Fan" type="Television"/>
+        </devices>
+    </room>
+    <room name="porch">
+        <devices>
+            <device name="Panasonic" type="Thermostat"/>
+        </devices>
+    </room>
+    <room name="OneMoreRoom">
+        <devices>
+            <device name="Havell Fan" type="Television"/>
+            <device name="Jaguar" type="WaterTap"/>
+        </devices>
+    </room>
+    <room name="kitchen">
+        <devices>
+            <device name="panasonic Fridge" type="Stereo"/>
+            <device name="Godrej Microwave" type="AirConditioner"/>
+        </devices>
+    </room>
+</rooms>

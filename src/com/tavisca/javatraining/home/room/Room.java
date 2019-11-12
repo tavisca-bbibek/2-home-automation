@@ -1,4 +1,6 @@
-package com.tavisca.javatraining.home;
+package com.tavisca.javatraining.home.room;
+
+import com.tavisca.javatraining.home.device.Device;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,11 +27,11 @@ public class Room {
     }
 
     public String status() {
-        return id + "." + name + " : " +
+        return id + "." + name + " :\n\t " +
                 devices.stream()
                         .map(d -> "[" + d.getId() + "." + d.getName() + ": " +
-                                (d.isActive() ? "on" : "off") + "]")
-                        .collect(Collectors.joining("\n\t\t|"));
+                                (d.isOn() ? "on" : "off") + "]")
+                        .collect(Collectors.joining("\n\t "));
     }
 
     public long getId() {

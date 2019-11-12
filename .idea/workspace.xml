@@ -2,18 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d37c2441-1408-415f-a65b-4a97f1eff1cc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/d/1de6842a37e94c995ed6cecd06b377be88974835" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/a/7a181c0a2d536aca8eb39d89ee12edcb999b283e" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/5/95324967504bb0af1d4ad40c6d0ad01ab13c528c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/c/fcc0a3e53f7394a480445637a7347c6c9d7167ad" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/tavisca/javatraining/home/exception/InvalidRoomIdException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/1/813eed709064f4fe350895eefdcd650413084eee" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/house-config.dtd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/house-config.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/tavisca/javatraining/home/device/AirConditioner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/tavisca/javatraining/home/device/DeviceFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/tavisca/javatraining/home/device/DeviceType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/tavisca/javatraining/home/device/Door.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/tavisca/javatraining/home/device/Fan.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/tavisca/javatraining/home/device/Light.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/tavisca/javatraining/home/device/Operable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/tavisca/javatraining/home/device/Shower.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/tavisca/javatraining/home/device/Stereo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/tavisca/javatraining/home/device/Television.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/tavisca/javatraining/home/device/Thermostat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/tavisca/javatraining/home/exception/UnknownDeviceTypeException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/d/1de6842a37e94c995ed6cecd06b377be88974835" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/a/7a181c0a2d536aca8eb39d89ee12edcb999b283e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/5/95324967504bb0af1d4ad40c6d0ad01ab13c528c" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/5/95324967504bb0af1d4ad40c6d0ad01ab13c528c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/c/fcc0a3e53f7394a480445637a7347c6c9d7167ad" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/c/fcc0a3e53f7394a480445637a7347c6c9d7167ad" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/tavisca/javatraining/console/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/tavisca/javatraining/console/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/tavisca/javatraining/home/Device.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/tavisca/javatraining/home/Device.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/tavisca/javatraining/home/Device.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/tavisca/javatraining/home/device/Device.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/tavisca/javatraining/home/House.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/tavisca/javatraining/home/House.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/tavisca/javatraining/home/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/tavisca/javatraining/home/room/Room.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,6 +37,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -34,6 +48,11 @@
   <component name="ProjectId" id="1THgeLwaIWx7J536bYbP9eGWAAC" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/CaseStudyII" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -79,6 +98,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Main (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="Day-4" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="com.tavisca.javatraining.home.app.HomeApp" />
       <module name="2-home-automation" />
@@ -93,10 +119,12 @@
       <item itemvalue="Application.Main" />
       <item itemvalue="Application.App" />
       <item itemvalue="Application.Main (1)" />
+      <item itemvalue="Application.Main (2)" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.App" />
+        <item itemvalue="Application.Main (2)" />
         <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Main" />
       </list>

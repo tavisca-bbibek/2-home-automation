@@ -1,19 +1,29 @@
 package com.tavisca.javatraining.home;
 
+import com.tavisca.javatraining.home.device.Device;
+import com.tavisca.javatraining.home.device.DeviceFactory;
 import com.tavisca.javatraining.home.exception.InvalidRoomIdException;
+import com.tavisca.javatraining.home.exception.UnknownDeviceTypeException;
+import com.tavisca.javatraining.home.room.Room;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-import java.util.Scanner;
 
 public class House {
     private List<Room> rooms;
-    private Scanner sc;
+    private static House instance;
+    private DeviceFactory deviceFactory;
 
-    public House() {
+    private House() {
         rooms = new ArrayList<>();
-        sc = new Scanner(System.in);
+        deviceFactory = new DeviceFactory();
+    }
+
+    public static House getInstance() {
+        if (instance == null)
+            instance = new House();
+        return instance;
     }
 
     public Optional<Room> findRoomById(long roomId) {
@@ -29,14 +39,16 @@ public class House {
         return id;
     }
 
-    public long addDevice(long roomId, String deviceName) throws InvalidRoomIdException {
+    public long addDevice(String type, long roomId, String name) throws InvalidRoomIdException, UnknownDeviceTypeException {
         Optional<Room> maybeRoom = findRoomById(roomId);
         if (!maybeRoom.isPresent())
             throw new InvalidRoomIdException(roomId + " is doesn't exist");
 
         Room room = maybeRoom.get();
         int id = room.getDevices().size() + 1;
-        Device device = new Device(id, deviceName);
+        Device device = deviceFactory.newInstance(type);
+        device.setId(id);
+        device.setName(name);
         room.addDevice(device);
         return id;
     }
